@@ -379,7 +379,7 @@
         "mobile_image_quanlity": "2",
         "mobile_content_alignment": "left",
         "mobile_padding_top": 0,
-        "mobile_padding_bottom": 16,
+        "mobile_padding_bottom": 12,
         "desktop_padding_top": 36,
         "desktop_padding_bottom": 36,
         "custom_colors_background": "#2e2a39",
@@ -418,7 +418,7 @@
         "shape_color": "accent-1",
         "custom_shape_color": "#dd1d1d",
         "background_color": "background-1",
-        "custom_background_color": "#FFFFFF",
+        "custom_background_color": "#ffffff",
         "padding_top": 0,
         "padding_bottom": 0
       }
@@ -742,7 +742,7 @@
         "shape_color": "accent-1",
         "custom_shape_color": "#dd1d1d",
         "background_color": "background-1",
-        "custom_background_color": "#FFFFFF",
+        "custom_background_color": "#ffffff",
         "padding_top": 0,
         "padding_bottom": 0
       }
@@ -934,7 +934,7 @@
         "shape_color": "accent-1",
         "custom_shape_color": "#dd1d1d",
         "background_color": "background-1",
-        "custom_background_color": "#FFFFFF",
+        "custom_background_color": "#ffffff",
         "padding_top": 0,
         "padding_bottom": 0
       }
