@@ -958,7 +958,7 @@
       "name": "Section divider",
       "settings": {
         "visibility": "always-display",
-        "shape": "diagonal_1",
+        "shape": "waves_3",
         "flip_horizontal": false,
         "flip_vertical": false,
         "shape_color": "accent-1",
