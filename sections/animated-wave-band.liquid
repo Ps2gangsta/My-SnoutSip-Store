@@ -1,0 +1,292 @@
+{%- liquid
+  assign wave_color = section.settings.wave_color
+  assign text_color = section.settings.text_color
+  assign mode = section.settings.mode
+  assign wave_height = section.settings.wave_height
+  assign body_padding = section.settings.body_padding
+-%}
+
+{%- style -%}
+  .aero-wave-{{ section.id }} {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    background: transparent;
+    --aw-color: {{ wave_color }};
+    --aw-text: {{ text_color }};
+  }
+  .aero-wave-{{ section.id }} .aw-edge {
+    display: block;
+    width: 100%;
+    height: {{ wave_height }}px;
+    color: var(--aw-color);
+    pointer-events: none;
+  }
+  .aero-wave-{{ section.id }} .aw-edge--bottom { transform: scaleY(-1); }
+  .aero-wave-{{ section.id }} .aw-body {
+    position: relative;
+    background: var(--aw-color);
+    color: var(--aw-text);
+    padding: {{ body_padding }}px 0;
+    /* pull edges in by 1px so seams don't show */
+    margin-top: -1px;
+    margin-bottom: -1px;
+  }
+  .aero-wave-{{ section.id }} .aw-track-wrap {
+    overflow: hidden;
+    width: 100%;
+  }
+  .aero-wave-{{ section.id }} .aw-track {
+    display: inline-flex;
+    align-items: center;
+    gap: 56px;
+    padding-right: 56px;
+    white-space: nowrap;
+    animation: aw-scroll-{{ section.id }} {{ section.settings.scroll_speed }}s linear infinite;
+    will-change: transform;
+  }
+  .aero-wave-{{ section.id }} .aw-track:hover { animation-play-state: paused; }
+  .aero-wave-{{ section.id }} .aw-item {
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 0.01em;
+    color: var(--aw-text);
+  }
+  .aero-wave-{{ section.id }} .aw-dot {
+    display: inline-block;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: currentColor;
+    opacity: 0.55;
+  }
+  .aero-wave-{{ section.id }} .aw-faq {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 4px 24px;
+  }
+  .aero-wave-{{ section.id }} .aw-faq__title {
+    text-align: center;
+    margin: 0 0 14px;
+    font-size: 22px;
+    font-weight: 700;
+    letter-spacing: 0.01em;
+  }
+  .aero-wave-{{ section.id }} .aw-faq__item {
+    border-top: 1px solid rgba(255,255,255,0.35);
+  }
+  .aero-wave-{{ section.id }} .aw-faq__item:last-child {
+    border-bottom: 1px solid rgba(255,255,255,0.35);
+  }
+  .aero-wave-{{ section.id }} .aw-faq__item summary {
+    list-style: none;
+    cursor: pointer;
+    padding: 14px 6px;
+    font-size: 16px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+  }
+  .aero-wave-{{ section.id }} .aw-faq__item summary::-webkit-details-marker { display: none; }
+  .aero-wave-{{ section.id }} .aw-faq__item summary::after {
+    content: "+";
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 1;
+    transition: transform 220ms ease;
+  }
+  .aero-wave-{{ section.id }} .aw-faq__item[open] summary::after { transform: rotate(45deg); }
+  .aero-wave-{{ section.id }} .aw-faq__answer {
+    padding: 0 6px 16px;
+    margin: 0;
+    font-size: 15px;
+    line-height: 1.55;
+    opacity: 0.92;
+  }
+  @keyframes aw-scroll-{{ section.id }} {
+    from { transform: translateX(0); }
+    to   { transform: translateX(-50%); }
+  }
+  @media (max-width: 750px) {
+    .aero-wave-{{ section.id }} .aw-edge { height: {{ wave_height | divided_by: 1.4 | round }}px; }
+    .aero-wave-{{ section.id }} .aw-body { padding: {{ body_padding | divided_by: 1.3 | round }}px 0; }
+    .aero-wave-{{ section.id }} .aw-item { font-size: 14px; }
+    .aero-wave-{{ section.id }} .aw-faq { padding: 4px 16px; }
+    .aero-wave-{{ section.id }} .aw-faq__title { font-size: 18px; }
+    .aero-wave-{{ section.id }} .aw-faq__item summary { font-size: 15px; }
+    .aero-wave-{{ section.id }} .aw-faq__answer { font-size: 14px; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .aero-wave-{{ section.id }} .aw-track { animation: none; }
+  }
+{%- endstyle -%}
+
+<section class="aero-wave-{{ section.id }}" aria-label="{{ section.settings.aria_label | default: 'Highlight band' | escape }}">
+  <svg class="aw-edge aw-edge--top" viewBox="0 0 1440 80" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <path fill="currentColor" d="M0,42 C220,8 460,80 720,42 C980,4 1220,80 1440,42 L1440,80 L0,80 Z">
+      <animate attributeName="d" dur="9s" repeatCount="indefinite"
+        values="M0,42 C220,8 460,80 720,42 C980,4 1220,80 1440,42 L1440,80 L0,80 Z;
+                M0,58 C220,82 460,8 720,52 C980,90 1220,12 1440,48 L1440,80 L0,80 Z;
+                M0,42 C220,8 460,80 720,42 C980,4 1220,80 1440,42 L1440,80 L0,80 Z" />
+    </path>
+  </svg>
+
+  <div class="aw-body">
+    {%- if mode == 'faq' -%}
+      <div class="aw-faq">
+        {%- if section.settings.faq_title != blank -%}
+          <h3 class="aw-faq__title">{{ section.settings.faq_title }}</h3>
+        {%- endif -%}
+        {%- for block in section.blocks -%}
+          {%- if block.type == 'faq' -%}
+            <details class="aw-faq__item" {{ block.shopify_attributes }}>
+              <summary>{{ block.settings.question }}</summary>
+              <p class="aw-faq__answer">{{ block.settings.answer }}</p>
+            </details>
+          {%- endif -%}
+        {%- endfor -%}
+      </div>
+    {%- else -%}
+      {%- assign text_blocks = section.blocks | where: 'type', 'text' -%}
+      {%- if text_blocks.size > 0 -%}
+        <div class="aw-track-wrap">
+          <div class="aw-track">
+            {%- for n in (1..2) -%}
+              {%- for block in text_blocks -%}
+                <span class="aw-item" {{ block.shopify_attributes }}>{{ block.settings.label }}</span>
+                <span class="aw-dot" aria-hidden="true"></span>
+              {%- endfor -%}
+            {%- endfor -%}
+          </div>
+        </div>
+      {%- endif -%}
+    {%- endif -%}
+  </div>
+
+  <svg class="aw-edge aw-edge--bottom" viewBox="0 0 1440 80" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <path fill="currentColor" d="M0,42 C220,8 460,80 720,42 C980,4 1220,80 1440,42 L1440,80 L0,80 Z">
+      <animate attributeName="d" dur="11s" repeatCount="indefinite"
+        values="M0,42 C220,8 460,80 720,42 C980,4 1220,80 1440,42 L1440,80 L0,80 Z;
+                M0,54 C220,86 460,6 720,46 C980,92 1220,8 1440,52 L1440,80 L0,80 Z;
+                M0,42 C220,8 460,80 720,42 C980,4 1220,80 1440,42 L1440,80 L0,80 Z" />
+    </path>
+  </svg>
+</section>
+
+{% schema %}
+{
+  "name": "Animated Wave Band",
+  "tag": "section",
+  "class": "section section-aero-wave",
+  "settings": [
+    {
+      "type": "select",
+      "id": "mode",
+      "label": "Mode",
+      "options": [
+        { "value": "scroll", "label": "Scrolling text" },
+        { "value": "faq", "label": "FAQ accordion" }
+      ],
+      "default": "scroll"
+    },
+    {
+      "type": "color",
+      "id": "wave_color",
+      "label": "Wave color",
+      "default": "#57c4d8"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "range",
+      "id": "wave_height",
+      "min": 30,
+      "max": 120,
+      "step": 10,
+      "unit": "px",
+      "label": "Wave edge height",
+      "default": 60
+    },
+    {
+      "type": "range",
+      "id": "body_padding",
+      "min": 8,
+      "max": 80,
+      "step": 4,
+      "unit": "px",
+      "label": "Band vertical padding",
+      "default": 16
+    },
+    {
+      "type": "range",
+      "id": "scroll_speed",
+      "min": 10,
+      "max": 60,
+      "step": 2,
+      "unit": "s",
+      "label": "Scroll loop duration",
+      "default": 30
+    },
+    {
+      "type": "text",
+      "id": "faq_title",
+      "label": "FAQ title (FAQ mode only)",
+      "default": ""
+    },
+    {
+      "type": "text",
+      "id": "aria_label",
+      "label": "Accessibility label",
+      "default": "Highlight band"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "text",
+      "name": "Text item",
+      "settings": [
+        {
+          "type": "text",
+          "id": "label",
+          "label": "Text",
+          "default": "Free Shipping"
+        }
+      ]
+    },
+    {
+      "type": "faq",
+      "name": "FAQ item",
+      "settings": [
+        {
+          "type": "text",
+          "id": "question",
+          "label": "Question",
+          "default": "How does it work?"
+        },
+        {
+          "type": "textarea",
+          "id": "answer",
+          "label": "Answer",
+          "default": "Squeeze the bottle to fill the foldable bowl. Let your dog drink. Fold it back up. That's it."
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Animated Wave Band",
+      "blocks": [
+        { "type": "text", "settings": { "label": "Free International Shipping" } },
+        { "type": "text", "settings": { "label": "Trusted by 2,500+ Dog Owners" } },
+        { "type": "text", "settings": { "label": "30-Day Risk-Free Trial" } }
+      ]
+    }
+  ]
+}
+{% endschema %}
