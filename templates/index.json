@@ -669,14 +669,14 @@
           "type": "row",
           "settings": {
             "percentage": 90,
-            "row_text": "<p>Noticed that this product has significantly improved their life.</p>"
+            "row_text": "<p>Reach for SnoutSip on every walk, hike, or drive<\\/p>"
           }
         },
         "template--21507361505575__0f1fc9e4-bc4c-4052-9747-62d1f8472caa-row-3": {
           "type": "row",
           "settings": {
-            "percentage": 90,
-            "row_text": "<p>Noticed that this product has significantly improved their life.</p>"
+            "percentage": 95,
+            "row_text": "<p>Would recommend SnoutSip to another dog owner<\\/p>"
           }
         }
       },
@@ -700,7 +700,7 @@
         "results_headline_size": "h2",
         "results_text": "",
         "results_headline_alignment": "left",
-        "caption": "<p>Caption about the results and/or link for their proof.</p>",
+        "caption": "<p>Based on feedback from 2,500+ SnoutSip owners surveyed this year.</p>",
         "button_label": "",
         "link": "",
         "button_style_secondary": false,
@@ -724,7 +724,7 @@
         "field_row_fNxBGi": {
           "type": "field_row",
           "settings": {
-            "input_1_enabled": true,
+            "input_1_enabled": false,
             "input_1_type": "name",
             "input_1_required": false,
             "input_1_error_message": "This field is required",
@@ -735,41 +735,15 @@
             "input_2_error_message": "This field is required",
             "input_2_custom_name": "Custom input name"
           }
-        },
-        "field_row_f84rat": {
-          "type": "field_row",
-          "settings": {
-            "input_1_enabled": true,
-            "input_1_type": "phone",
-            "input_1_required": false,
-            "input_1_error_message": "This field is required",
-            "input_1_custom_name": "Custom input name",
-            "input_2_enabled": false,
-            "input_2_type": "custom",
-            "input_2_required": false,
-            "input_2_error_message": "This field is required",
-            "input_2_custom_name": "Custom input name"
-          }
-        },
-        "textarea_NbxXax": {
-          "type": "textarea",
-          "settings": {
-            "input_type": "comment",
-            "input_required": false,
-            "input_error_message": "This field is required",
-            "input_custom_name": "Custom name"
-          }
         }
       },
       "block_order": [
-        "field_row_fNxBGi",
-        "field_row_f84rat",
-        "textarea_NbxXax"
+        "field_row_fNxBGi"
       ],
       "settings": {
         "display_id": false,
         "visibility": "always-display",
-        "title": "Contact form",
+        "title": "Get in Touch",
         "title_highlight_color": "#6d388b",
         "heading_size": "h1",
         "button_full_width": true,
@@ -800,21 +774,6 @@
     "17783013169a861b96": {
       "type": "_blocks",
       "settings": {}
-    },
-    "wave-divider-home-1": {
-      "type": "section-divider",
-      "settings": {
-        "visibility": "always-display",
-        "shape": "waves_3",
-        "flip_horizontal": false,
-        "flip_vertical": false,
-        "shape_color": "accent-1",
-        "custom_shape_color": "#57c4d8",
-        "background_color": "background-1",
-        "custom_background_color": "#ffffff",
-        "padding_top": 0,
-        "padding_bottom": 0
-      }
     },
     "wave-divider-home-2": {
       "type": "section-divider",
@@ -876,26 +835,123 @@
         "padding_bottom": 0
       }
     },
-    "wave-divider-home-6": {
-      "type": "section-divider",
+    "text-banner-trust": {
+      "type": "horizontal-ticker",
+      "blocks": {
+        "text-block-0": {
+          "type": "text",
+          "settings": {
+            "title": "Free International Shipping"
+          }
+        },
+        "text-block-1": {
+          "type": "text",
+          "settings": {
+            "title": "Trusted by 2,500+ Dog Owners Worldwide"
+          }
+        },
+        "text-block-2": {
+          "type": "text",
+          "settings": {
+            "title": "30-Day Risk-Free Trial"
+          }
+        }
+      },
+      "block_order": [
+        "text-block-0",
+        "text-block-1",
+        "text-block-2"
+      ],
       "settings": {
         "visibility": "always-display",
-        "shape": "waves_3",
-        "flip_horizontal": false,
-        "flip_vertical": false,
-        "shape_color": "accent-1",
-        "custom_shape_color": "#57c4d8",
-        "background_color": "background-1",
-        "custom_background_color": "#ffffff",
-        "padding_top": 0,
-        "padding_bottom": 0
+        "speed": 2,
+        "direction": "normal",
+        "stop_on_hover": true,
+        "mobile_spacing": 48,
+        "desktop_spacing": 80,
+        "color_scheme": "custom",
+        "mobile_text_size": 14,
+        "desktop_text_size": 15,
+        "italic_text": false,
+        "uppercase_text": false,
+        "bold_text": false,
+        "mobile_image_height": 26,
+        "desktop_image_height": 40,
+        "mobile_reviews_width": 300,
+        "desktop_reviews_width": 400,
+        "hidden_products": "",
+        "enable_specific_display": false,
+        "displayed_products": "",
+        "mobile_padding_top": 8,
+        "mobile_padding_bottom": 8,
+        "desktop_padding_top": 12,
+        "desktop_padding_bottom": 12,
+        "custom_colors_background": "#57c4d8",
+        "custom_gradient_background": "",
+        "custom_colors_text": "#ffffff"
+      }
+    },
+    "text-banner-tagline": {
+      "type": "horizontal-ticker",
+      "blocks": {
+        "text-block-0": {
+          "type": "text",
+          "settings": {
+            "title": "Hydration Made Simple"
+          }
+        },
+        "text-block-1": {
+          "type": "text",
+          "settings": {
+            "title": "Adventures Made Better"
+          }
+        },
+        "text-block-2": {
+          "type": "text",
+          "settings": {
+            "title": "Built for Every Walk"
+          }
+        }
+      },
+      "block_order": [
+        "text-block-0",
+        "text-block-1",
+        "text-block-2"
+      ],
+      "settings": {
+        "visibility": "always-display",
+        "speed": 2,
+        "direction": "normal",
+        "stop_on_hover": true,
+        "mobile_spacing": 48,
+        "desktop_spacing": 80,
+        "color_scheme": "custom",
+        "mobile_text_size": 14,
+        "desktop_text_size": 15,
+        "italic_text": false,
+        "uppercase_text": false,
+        "bold_text": false,
+        "mobile_image_height": 26,
+        "desktop_image_height": 40,
+        "mobile_reviews_width": 300,
+        "desktop_reviews_width": 400,
+        "hidden_products": "",
+        "enable_specific_display": false,
+        "displayed_products": "",
+        "mobile_padding_top": 8,
+        "mobile_padding_bottom": 8,
+        "desktop_padding_top": 12,
+        "desktop_padding_bottom": 12,
+        "custom_colors_background": "#57c4d8",
+        "custom_gradient_background": "",
+        "custom_colors_text": "#ffffff"
       }
     }
   },
   "order": [
     "cfca4268-6358-426c-98ab-d292aeef11e5",
     "featured_product_4fT6xH",
-    "wave-divider-home-1",
+    "text-banner-trust",
     "image_with_text_yE6GyV",
     "wave-divider-home-2",
     "6aa09428-a417-429d-9159-a4e8afd49590",
@@ -905,7 +961,7 @@
     "d2d3417b-e92f-428c-b221-5bceffb552be",
     "wave-divider-home-5",
     "0f1fc9e4-bc4c-4052-9747-62d1f8472caa",
-    "wave-divider-home-6",
+    "text-banner-tagline",
     "contact_form_WHP8G7",
     "17783013169a861b96"
   ]

@@ -9,25 +9,7 @@ html {
 }
 
 /* ---------- Marquee polish ----------
-   Soft fade at left/right edges so text doesn't pop on/off the
-   sides of the ticker. Targets the horizontal-ticker section. */
-.shopify-section-header [class*="horizontal-ticker-"],
-.shopify-section [class*="horizontal-ticker-"] {
-  -webkit-mask-image: linear-gradient(
-    to right,
-    transparent 0,
-    #000 56px,
-    #000 calc(100% - 56px),
-    transparent 100%
-  );
-          mask-image: linear-gradient(
-    to right,
-    transparent 0,
-    #000 56px,
-    #000 calc(100% - 56px),
-    transparent 100%
-  );
-}
+   Solid bar (no edge fade) — text slides on/off cleanly. */
 
 /* ---------- Scroll reveal ----------
    Sections start slightly translated + transparent, then fade

@@ -596,6 +596,60 @@
             "text": "<p>Sand, saltwater, sun — handled all of it. Rinses clean and looks brand new every time we get home.</p>",
             "author": "<em><strong>Marcus T.</strong></em>"
           }
+        },
+        "template--21507361800487__55bd100e-3bbd-426c-a5cf-eed7b2a3706f-column-9": {
+          "type": "column",
+          "settings": {
+            "star_rating": 5,
+            "title": "Best impulse buy this year",
+            "text": "<p>Was on the fence about it. Three weeks in and it goes everywhere with me and Bailey. Just a really well-made product.</p>",
+            "author": "<em><strong>Erin V.<\\/strong><\\/em>"
+          }
+        },
+        "template--21507361800487__55bd100e-3bbd-426c-a5cf-eed7b2a3706f-column-10": {
+          "type": "column",
+          "settings": {
+            "star_rating": 5,
+            "title": "Quality is unreal",
+            "text": "<p>I've bought a dozen pet products that fell apart in a month. This one feels built to actually last. Stainless steel, clean welds, nothing flimsy.</p>",
+            "author": "<em><strong>Carlos M.<\\/strong><\\/em>"
+          }
+        },
+        "template--21507361800487__55bd100e-3bbd-426c-a5cf-eed7b2a3706f-column-11": {
+          "type": "column",
+          "settings": {
+            "star_rating": 5,
+            "title": "My pup loves it",
+            "text": "<p>Maisie now associates the click of the clip with going outside. She lights up every time. That's all I needed to know.</p>",
+            "author": "<em><strong>Sam K.<\\/strong><\\/em>"
+          }
+        },
+        "template--21507361800487__55bd100e-3bbd-426c-a5cf-eed7b2a3706f-column-12": {
+          "type": "column",
+          "settings": {
+            "star_rating": 5,
+            "title": "Solves a real problem",
+            "text": "<p>Long walks in the summer used to mean cutting them short. Now we go further because I know I can give her water whenever.</p>",
+            "author": "<em><strong>Rachel D.<\\/strong><\\/em>"
+          }
+        },
+        "template--21507361800487__55bd100e-3bbd-426c-a5cf-eed7b2a3706f-column-13": {
+          "type": "column",
+          "settings": {
+            "star_rating": 5,
+            "title": "Better than I expected",
+            "text": "<p>Honestly thought the foldable bowl would feel cheap. Wrong. It's solid silicone and seals shut so well I can shake the bottle upside down with no leak.</p>",
+            "author": "<em><strong>Yusuf A.<\\/strong><\\/em>"
+          }
+        },
+        "template--21507361800487__55bd100e-3bbd-426c-a5cf-eed7b2a3706f-column-14": {
+          "type": "column",
+          "settings": {
+            "star_rating": 5,
+            "title": "Worth it for the design alone",
+            "text": "<p>Looks like something Aesop would sell. Matches my bag, doesn't scream 'pet product'. Bonus that it actually works.</p>",
+            "author": "<em><strong>Lena F.<\\/strong><\\/em>"
+          }
         }
       },
       "block_order": [
@@ -606,7 +660,13 @@
         "template--21507361800487__55bd100e-3bbd-426c-a5cf-eed7b2a3706f-column-5",
         "template--21507361800487__55bd100e-3bbd-426c-a5cf-eed7b2a3706f-column-6",
         "template--21507361800487__55bd100e-3bbd-426c-a5cf-eed7b2a3706f-column-7",
-        "template--21507361800487__55bd100e-3bbd-426c-a5cf-eed7b2a3706f-column-8"
+        "template--21507361800487__55bd100e-3bbd-426c-a5cf-eed7b2a3706f-column-8",
+        "template--21507361800487__55bd100e-3bbd-426c-a5cf-eed7b2a3706f-column-9",
+        "template--21507361800487__55bd100e-3bbd-426c-a5cf-eed7b2a3706f-column-10",
+        "template--21507361800487__55bd100e-3bbd-426c-a5cf-eed7b2a3706f-column-11",
+        "template--21507361800487__55bd100e-3bbd-426c-a5cf-eed7b2a3706f-column-12",
+        "template--21507361800487__55bd100e-3bbd-426c-a5cf-eed7b2a3706f-column-13",
+        "template--21507361800487__55bd100e-3bbd-426c-a5cf-eed7b2a3706f-column-14"
       ],
       "settings": {
         "display_id": false,
