@@ -523,6 +523,21 @@
         "visibility": "always-display",
         "shape": "waves_3",
         "flip_horizontal": false,
+        "flip_vertical": false,
+        "shape_color": "accent-1",
+        "custom_shape_color": "#57c4d8",
+        "background_color": "background-1",
+        "custom_background_color": "#ffffff",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "section_divider_XqFKaH": {
+      "type": "section-divider",
+      "settings": {
+        "visibility": "always-display",
+        "shape": "waves_3",
+        "flip_horizontal": false,
         "flip_vertical": true,
         "shape_color": "accent-1",
         "custom_shape_color": "#57c4d8",
@@ -605,6 +620,21 @@
         "shape": "waves_3",
         "flip_horizontal": false,
         "flip_vertical": false,
+        "shape_color": "accent-1",
+        "custom_shape_color": "#57c4d8",
+        "background_color": "background-1",
+        "custom_background_color": "#ffffff",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "section_divider_A4XtGM": {
+      "type": "section-divider",
+      "settings": {
+        "visibility": "always-display",
+        "shape": "waves_3",
+        "flip_horizontal": false,
+        "flip_vertical": true,
         "shape_color": "accent-1",
         "custom_shape_color": "#57c4d8",
         "background_color": "background-1",
@@ -948,8 +978,10 @@
     "section_divider_zEqr7B",
     "6aa09428-a417-429d-9159-a4e8afd49590",
     "wave-divider-home-3",
+    "section_divider_XqFKaH",
     "image_with_text_3pwD8K",
     "wave-divider-home-4",
+    "section_divider_A4XtGM",
     "d2d3417b-e92f-428c-b221-5bceffb552be",
     "wave-divider-home-5",
     "section_divider_3rQwUe",
