@@ -1,0 +1,130 @@
+/* ============================================================
+   SnoutSip — Polish layer (additive, scoped, non-breaking)
+   Adds: marquee edge-fade, scroll reveal, hover lift, image zoom
+   ============================================================ */
+
+/* Smooth in-page scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* ---------- Marquee polish ----------
+   Soft fade at left/right edges so text doesn't pop on/off the
+   sides of the ticker. Targets the horizontal-ticker section. */
+.shopify-section-header [class*="horizontal-ticker-"],
+.shopify-section [class*="horizontal-ticker-"] {
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent 0,
+    #000 56px,
+    #000 calc(100% - 56px),
+    transparent 100%
+  );
+          mask-image: linear-gradient(
+    to right,
+    transparent 0,
+    #000 56px,
+    #000 calc(100% - 56px),
+    transparent 100%
+  );
+}
+
+/* ---------- Scroll reveal ----------
+   Sections start slightly translated + transparent, then fade
+   and rise into place when .ss-reveal--in is added by JS. */
+.ss-reveal {
+  opacity: 0;
+  transform: translateY(18px);
+  transition:
+    opacity 700ms cubic-bezier(.2, .7, .2, 1),
+    transform 700ms cubic-bezier(.2, .7, .2, 1);
+  will-change: opacity, transform;
+}
+.ss-reveal--in {
+  opacity: 1;
+  transform: none;
+}
+/* Respect users who prefer no motion */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .ss-reveal { opacity: 1; transform: none; transition: none; }
+}
+
+/* ---------- Button hover lift ----------
+   Applies to the theme's standard button classes without
+   changing their color, size, or border. */
+.button:not(.button--small):not([disabled]),
+.shopify-payment-button .shopify-payment-button__button,
+button.button {
+  transition:
+    transform 220ms cubic-bezier(.2, .7, .2, 1),
+    box-shadow 220ms cubic-bezier(.2, .7, .2, 1),
+    filter   220ms ease;
+}
+.button:not(.button--small):not([disabled]):hover,
+.shopify-payment-button .shopify-payment-button__button:hover,
+button.button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.10);
+  filter: brightness(1.02);
+}
+.button:not(.button--small):not([disabled]):active,
+button.button:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.10);
+}
+
+/* ---------- Product card hover lift + image zoom ----------
+   Affects product / collection cards site-wide. The zoom uses
+   transform on the inner media wrapper, so layout never shifts. */
+.card-wrapper,
+.card-product,
+.card-collection,
+.card,
+product-card {
+  transition:
+    transform 320ms cubic-bezier(.2, .7, .2, 1),
+    box-shadow 320ms cubic-bezier(.2, .7, .2, 1);
+}
+.card-wrapper:hover,
+.card-product:hover,
+.card-collection:hover,
+.card:hover,
+product-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.08);
+}
+
+.card__media,
+.card .media,
+.card-product .media,
+.card-wrapper .media {
+  overflow: hidden;
+}
+.card__media img,
+.card .media img,
+.card-product .media img,
+.card-wrapper .media img {
+  transition: transform 600ms cubic-bezier(.2, .7, .2, 1);
+  will-change: transform;
+}
+.card-wrapper:hover .card__media img,
+.card-wrapper:hover .media img,
+.card:hover .card__media img,
+.card-product:hover .media img,
+.card-collection:hover .media img {
+  transform: scale(1.045);
+}
+
+/* Don't apply hover lift on touch devices (avoids sticky-hover) */
+@media (hover: none) {
+  .card-wrapper:hover,
+  .card-product:hover,
+  .card-collection:hover,
+  .card:hover,
+  product-card:hover { transform: none; box-shadow: none; }
+  .card-wrapper:hover .card__media img,
+  .card:hover .card__media img,
+  .card-product:hover .media img,
+  .card-collection:hover .media img { transform: none; }
+}

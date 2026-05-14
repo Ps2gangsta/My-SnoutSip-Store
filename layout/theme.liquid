@@ -22,6 +22,11 @@
 
     <script src="{{ 'main.js' | asset_url }}" defer="defer" data-defer="true" data-country-list-function="{{ settings.country_list_function }}" data-country-list="{{ settings.country_list }}" data-country-list-error="{{ settings.country_invalid_error_msg }}" data-animations-type="{{ settings.animations_type }}"></script>
     <script src="{{ 'secondary.js' | asset_url }}" defer="defer" data-defer="true" data-is-rtl="{{ is_rtl }}"></script>
+
+    {%- comment -%} SnoutSip polish: hover lift, scroll reveal, marquee edge fade {%- endcomment -%}
+    <link rel="stylesheet" href="{{ 'snoutsip-polish.css' | asset_url }}" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="{{ 'snoutsip-polish.css' | asset_url }}"></noscript>
+    <script src="{{ 'snoutsip-polish.js' | asset_url }}" defer="defer"></script>
     
     <link rel="preconnect" href="https://www.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
