@@ -791,14 +791,14 @@
           "type": "row",
           "settings": {
             "percentage": 90,
-            "row_text": "<p>Reach for SnoutSip on every walk, hike, or drive<\\/p>"
+            "row_text": "<p>Of dog owners say they wish they had an easier way to carry water on walks</p>"
           }
         },
         "template--21507361505575__0f1fc9e4-bc4c-4052-9747-62d1f8472caa-row-3": {
           "type": "row",
           "settings": {
-            "percentage": 95,
-            "row_text": "<p>Would recommend SnoutSip to another dog owner<\\/p>"
+            "percentage": 74,
+            "row_text": "<p>Of dog owners report their dog is more energetic on walks when properly hydrated</p>"
           }
         }
       },
