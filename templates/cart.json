@@ -60,6 +60,22 @@
         "padding_bottom": 12
       }
     },
+    "section_divider_4yXT74": {
+      "type": "section-divider",
+      "name": "Section divider",
+      "settings": {
+        "visibility": "always-display",
+        "shape": "waves_3",
+        "flip_horizontal": false,
+        "flip_vertical": true,
+        "shape_color": "accent-1",
+        "custom_shape_color": "#dd1d1d",
+        "background_color": "background-1",
+        "custom_background_color": "#FFFFFF",
+        "padding_top": 12,
+        "padding_bottom": 12
+      }
+    },
     "newsletter": {
       "type": "newsletter",
       "blocks": {
@@ -109,6 +125,7 @@
     "cart-items",
     "cart-footer",
     "section_divider_7PV6fq",
+    "section_divider_4yXT74",
     "newsletter"
   ]
 }
