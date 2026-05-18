@@ -21,6 +21,7 @@
       "blocks": {
         "dec6ac13-eef3-4b4c-900a-e550eb977500": {
           "type": "discount_field",
+          "disabled": true,
           "settings": {
             "placeholder": "Enter discount code",
             "btn_label": "ADD",
