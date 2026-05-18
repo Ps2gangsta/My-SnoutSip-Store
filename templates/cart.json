@@ -57,7 +57,7 @@
         "background_color": "background-1",
         "custom_background_color": "#FFFFFF",
         "padding_top": 12,
-        "padding_bottom": 12
+        "padding_bottom": 0
       }
     },
     "section_divider_4yXT74": {
